@@ -12,7 +12,7 @@ Due to its large size, the dataset is not included in this repository.
 
 The dataset is highly imbalanced across decades, which motivates the use of balanced evaluation metrics.
 
-Link : https://archive.ics.uci.edu/dataset/203/yearpredictionmsd 
+Link of the dataset : https://archive.ics.uci.edu/dataset/203/yearpredictionmsd 
 
 
 # Project Overview
@@ -44,10 +44,6 @@ To account for class imbalance, the following metrics are used:
 - **Balanced Accuracy**
 - **Macro F1-score**
 
-Balanced accuracy and macro F1 are emphasized, as they give equal importance to all decades regardless of their frequency.
-
-Confusion matrices are also used to analyze misclassification patterns across decades.
-
 # Code Structure
 
 The main notebook includes:
@@ -62,24 +58,9 @@ The main notebook includes:
 
 # Note on Execution Time
 
-Some parts of the notebook, especially hyperparameter optimization and advanced models, are computationally expensive and can take several hours to run.
-
-For this reason, the notebook was **not re-executed in full** after results were obtained.  
-All reported results correspond to runs performed beforehand and saved for analysis and presentation.
-
-# Key Findings
-
-- All models perform above chance level, confirming that audio features contain temporal information.
-- Performance remains moderate due to overlapping acoustic characteristics between decades.
-- Advanced models such as Random Forest and XGBoost better capture non-linear patterns.
-- Linear models provide more stable predictions across decades when evaluated with balanced metrics.
-
-# Repository Contents
-
-- Jupyter notebooks containing the full experimental pipeline
-- Generated figures (evaluation metrics, confusion matrices, feature importance)
-- Supporting scripts and configuration files
-- Project report and presentation materials (if applicable)
+Some parts of the notebook, especially hyperparameter optimization and advanced models are computationally expensive and can take several hours to run.
+For this reason, some intermediate results are saved as '.pkl' files.
+These files allow the results to be reproduced without re-running computationally expensive steps.
 
 # Author
 **Razane Moossa**  
